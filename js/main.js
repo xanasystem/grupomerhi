@@ -6,18 +6,25 @@
 (function () {
   "use strict";
 
-  // Nombre exacto del enlace -> URL de destino
+  // Nombre exacto del enlace -> URL de destino ("" = todavía sin web)
   var URLS = {
-    "AVGD": "#",
-    "Magna Cerámica": "#",
-    "Decker": "#",
-    "H Mosaics": "#"
+    "AVGD": "https://avgd.eu/",
+    "Magna Cerámica": "https://www.magnaceramica.es/",
+    "Decker": "",
+    "H Mosaics": "https://htilesmosaics.com/"
   };
 
   document.querySelectorAll(".company").forEach(function (link) {
     var name = link.querySelector("span").textContent.trim();
-    if (URLS[name] && URLS[name] !== "#") {
-      link.href = URLS[name];
+    var url = URLS[name];
+    if (url) {
+      link.href = url;
+    } else {
+      // Sin web por ahora: no navega, pero se ve igual que los demás
+      link.removeAttribute("target");
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
     }
   });
 })();
