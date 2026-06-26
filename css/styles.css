@@ -165,17 +165,35 @@ body {
 }
 
 .company__arrow {
-  font-size: 0.85em;
-  line-height: 1;
+  width: 0.95em;
+  height: 0.95em;
+  flex-shrink: 0;
 }
 
-/* ---------- Móvil: las 4 píldoras siguen en una fila, más compactas ---------- */
+/* ---------- Móvil: píldoras apiladas, mismo ancho, sin scroll ---------- */
 @media (max-width: 600px) {
-  .companies {
-    gap: 6px;
+  .hero__content {
+    gap: 48px; /* menos aire para que todo quepa */
+    padding-top: clamp(28px, 6vh, 48px);
+    padding-bottom: clamp(28px, 6vh, 48px);
   }
+
+  .hero__subtitle {
+    max-width: 280px; /* mismo ancho visual que los botones */
+  }
+
+  .companies {
+    flex-direction: column;
+    align-items: stretch; /* todas al mismo ancho */
+    width: 100%;
+    max-width: 280px;
+    gap: 12px;
+  }
+
   .company {
-    padding: 8px 12px;
-    font-size: 11px;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
   }
 }
