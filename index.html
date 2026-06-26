@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Merhi</title>
+  <meta name="description" content="Family-owned business group. Building long-term value across construction, real estate, and ceramics through its different companies." />
+
+  <!-- Tipografía Montserrat (del diseño de Figma) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="hero">
+    <!-- Fondo: vídeo con la imagen como póster hasta que carga -->
+    <video
+      class="hero__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="assets/img/hero-bg.jpg"
+    >
+      <source
+        src="https://pub-b7e9a4dc61384ccaa77d47ef1c1910cb.r2.dev/grupoMerhi-video-slide.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <!-- Preheader -->
+      <span class="preheader">FAMILY-OWNED BUSINESS GROUP</span>
+
+      <!-- Título + subtítulo -->
+      <div class="hero__heading">
+        <h1 class="hero__title">GRUPO<br />MERHI</h1>
+        <p class="hero__subtitle">
+          Building long-term value across construction, real estate, and ceramics
+          through its different companies.
+        </p>
+      </div>
+
+      <!-- Empresas del grupo (URLs placeholder, cambiar href) -->
+      <nav class="companies" aria-label="Empresas del grupo">
+        <a class="company" href="#" target="_blank" rel="noopener">
+          <span>AVGD</span><span class="company__arrow" aria-hidden="true">&#129125;</span>
+        </a>
+        <a class="company" href="#" target="_blank" rel="noopener">
+          <span>Magna Cerámica</span><span class="company__arrow" aria-hidden="true">&#129125;</span>
+        </a>
+        <a class="company" href="#" target="_blank" rel="noopener">
+          <span>Decker</span><span class="company__arrow" aria-hidden="true">&#129125;</span>
+        </a>
+        <a class="company" href="#" target="_blank" rel="noopener">
+          <span>H Mosaics</span><span class="company__arrow" aria-hidden="true">&#129125;</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
